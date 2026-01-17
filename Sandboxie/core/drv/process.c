@@ -779,7 +779,8 @@ _FX PROCESS *Process_Create(
     //
     // check certificate
     //
-
+	Verify_CertInfo.active = true;
+	Verify_CertInfo.opt_sec = true;
     if (!(Verify_CertInfo.active && Verify_CertInfo.opt_sec) && !proc->image_sbie) {
 
         const WCHAR* exclusive_setting = NULL;
